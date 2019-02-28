@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Items</title>
+    <style>
+  
+    </style>
+</head>
+<body>
+    <h3>My Items</h3>
+     <div id='dynamicItemContent' class="col-md-12">
+     
+    </div>   
+
+    <button 
+        type="button" 
+        class="btn btn-primary" 
+        data-toggle='modal' 
+        data-target='#addItemModal'
+        >Add Item</button>
+        <div id='addItemModal'
+            class='modal fade'
+            role='dialog'
+        >
+        <div class='modal-dialog'>
+            <div class='modal-content'>
+            <div class='modal-header'>
+                <button type='button' 
+                    class='close'
+                    data-dismiss='modal'>&times;</button>
+                <h4 class='modal-title'>Add Item</h4>       
+            </div>
+            <div class='modal-body'>
+                <div class="form-group">
+                    <label for="itemname">Item Name:</label>
+                    <input type="text" class="form-control" id="itemName">
+                </div>
+                <div class="form-group">
+                    <label for="itemprice">Item Price:</label>
+                    <input type="number" class="form-control" id="itemPrice">
+                </div>  
+                <div class="form-group">
+                        <label for="manName">Manufacturer Name:</label>
+                        <input type="text" class="form-control" id="manName">
+                </div>        
+            </div>
+            <div class='modal-footer'>
+                <button class='btn btn-success' 
+                    data-dismiss='modal'
+                    onclick="addItemForm()"
+                    >ADD</button>
+                <button class='btn btn-default' 
+                    data-dismiss='modal'>Cancel</button>    
+            </div>
+        </div>    
+        </div>    
+        </div>
+
+        <script>
+        $(document).ready(function(){
+            getItemCount();
+        });
+        </script>
+</body>
+</html>
